@@ -1,13 +1,13 @@
 {
   "name": "electron_st",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon --watch index.js --exec electron .",
     "build-icon": "electron-icon-builder --input=./public/icon.png --output=build --flatten",
     "pack": "electron-builder",
-    "release": "cross-env GH_TOKEN=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 electron-builder",
+    "release": "cross-env GH_TOKEN=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 electron-builder",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "floweryan",
@@ -39,9 +39,6 @@
     },
     "publish": {
        "provider":"github",
-       "owner":"floweryan313",
-       "repo":"https://github.com/floweryan313/electron_st.git",
-       "token": "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",
        "releaseType": "release"
     }
   }
