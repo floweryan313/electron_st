@@ -1,0 +1,48 @@
+{
+  "name": "electron_st",
+  "version": "1.0.4",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch index.js --exec electron .",
+    "build-icon": "electron-icon-builder --input=./public/icon.png --output=build --flatten",
+    "pack": "electron-builder",
+    "release": "cross-env GH_TOKEN=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 electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "floweryan",
+  "license": "MIT",
+  "dependencies": {
+    "electron-updater": "^6.1.4"
+   
+  },
+  "devDependencies": {
+    "electron": "^26.4.0",
+    "electron-builder": "^24.6.4",
+    "electron-icon-builder": "^2.0.1",
+    "electron-updater": "^6.1.4",
+    "nodemon": "^3.0.1"
+  },
+  "build": {
+    "appId": "this.is.tasky",
+    "productName": "Tasky",
+    "copyright": "Copyright © 2021 Alaso",
+    "directories": {
+      "buildResources": "build",
+      "output": "dist"
+    },
+    "nsis": {
+      "oneClick": false,               
+      "language": "2052",             
+      "perMachine": true,              
+      "allowToChangeInstallationDirectory": true   
+  
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "http://127.0.0.1:9005/" 
+      }
+    ]
+  }
+}
